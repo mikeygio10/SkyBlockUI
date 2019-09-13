@@ -1,7 +1,10 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/ItzLightyHD/SkyBlockUI
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/LightSwagitzHD/SkyBlockUI
 branches:
 - master
 projects:
   SkyBlockUI:
     path: ""
+    libs:
+    - src: jojoe77777/FormAPI/libFormAPI
+      version: ^1.3
 ...
