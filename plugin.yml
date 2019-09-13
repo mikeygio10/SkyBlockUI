@@ -1,0 +1,9 @@
+name: SkyBlockUI
+main: ItzLightyHD\SkyBlockUI\Main
+author: ItzLightyHD
+api: [3.0.0]
+version: 1.0.8
+commands:
+  skyblockui:
+    usage: /skyblockui
+    description: Create and manage your island
