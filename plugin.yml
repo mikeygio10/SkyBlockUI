@@ -2,8 +2,10 @@ name: SkyBlockUI
 main: ItzLightyHD\SkyBlockUI\Main
 author: ItzLightyHD
 api: [3.0.0]
+depend: ["OrbitCore", "SkyBlock"]
 version: 1.0.8
 commands:
   skyblockui:
     usage: /skyblockui
     description: Create and manage your island
+    aliases: ["sbui"]

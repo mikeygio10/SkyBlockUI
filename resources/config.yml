@@ -1,7 +1,7 @@
 #Config Version, don't change it!
 config-version: 7
 
-title: §l§cNether§4Network §r§lSkyBlock
+title: SkyBlockUI
 exit-button: §l§cExit
 content: Manage easily your island!
 create-content: Choose a preset to use to create your SkyBlock Isle.
@@ -37,7 +37,7 @@ visit-content: Visit a Player or a Friend's isle if his isle is unlocked.
 transfer-content: Transfer your isle to another player or to your best friend!
 
 #Friends main form config
-friends-content: The NetherNetwork Play Service lets you to play SkyBlock with your friends and finally!!!
+friends-content: You can play SkyBlock with your friends!
 invite-button: Invite a Player
 accept-button: Accept an Invite
 deny-button: Deny an Invite

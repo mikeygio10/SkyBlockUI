@@ -14,26 +14,13 @@ use pocketmine\event\server\ServerCommandEvent;
 class Main extends PluginBase implements Listener{
     public function onEnable(): void{
         $this->getServer()->getPluginManager()->registerEvents(($this), $this);
-        $this->getLogger()->info("Plugin Enabled By ItzLightyHD");
-        $this->getLogger()->info("Edit the config.yml to the plugin_data");
 		$this->saveResource("config.yml");
 		if($this->getConfig()->get("config-version") == 6) {
 			$this->getLogger()->warning("Delete the config.yml because we detected an old version's config of the plugin");
 		} else {
-			$this->getLogger()->info("Config readed succesfully!");
 		}
     }
-    public function onDisable(): void{
-        $this->getLogger()->info("Plugin Disabled By ItzLightyHD");
-    }
-    public function checkDepends(): void{
-        $this->sb = $this->getServer()->getPluginManager()->getPlugin("SkyBlock");
-        if(is_null($this->sb)){
-            $this->getLogger()->error("SkyBlockUI Requires SkyBlock To Work");
-            $this->getPluginLoader()->disablePlugin($this);
-        }
-    }
-	
+
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args):bool{
         if($cmd->getName() == "skyblockui"){
             if(!($sender instanceof Player)){
@@ -167,7 +154,7 @@ class Main extends PluginBase implements Listener{
             $form->sendToPlayer($sender);
             return true;
     }
-	
+
 	public function friendsForm(CommandSender $sender):bool{
         if(!($sender instanceof Player)){
                 $sender->sendMessage("Manage your island easily!", false);
@@ -208,7 +195,7 @@ class Main extends PluginBase implements Listener{
             $form->sendToPlayer($sender);
             return true;
     }
-	
+
 	public function inviteForm(CommandSender $sender):bool{
         if(!($sender instanceof Player)){
                 $sender->sendMessage("Manage your island easily!", false);
@@ -229,7 +216,7 @@ class Main extends PluginBase implements Listener{
             $form->sendToPlayer($sender);
             return true;
     }
-	
+
 	public function cooperateForm(CommandSender $sender):bool{
         if(!($sender instanceof Player)){
                 $sender->sendMessage("Manage your island easily!", false);
@@ -250,7 +237,7 @@ class Main extends PluginBase implements Listener{
             $form->sendToPlayer($sender);
             return true;
     }
-	
+
 	public function visitForm(CommandSender $sender):bool{
         if(!($sender instanceof Player)){
                 $sender->sendMessage("Manage your island easily!", false);
@@ -271,7 +258,7 @@ class Main extends PluginBase implements Listener{
             $form->sendToPlayer($sender);
             return true;
     }
-	
+
 	public function transferForm(CommandSender $sender):bool{
         if(!($sender instanceof Player)){
                 $sender->sendMessage("Manage your island easily!", false);
