@@ -41,41 +41,41 @@ class Main extends PluginBase implements Listener{
 						}
 						if($this->getConfig()->get("allow-generators") == false) {
 							if($this->getConfig()->get("default-generator") == "basic") {
-								$this->getServer()->getCommandMap()->dispatch($player, "is create basic");
+								$this->getServer()->getCommandMap()->dispatch($player, "sb create basic");
                                 break;
 							}
 							if($this->getConfig()->get("default-generator") == "lost") {
-								$this->getServer()->getCommandMap()->dispatch($player, "is create lost");
+								$this->getServer()->getCommandMap()->dispatch($player, "sb create lost");
                                 break;
 							}
 							if($this->getConfig()->get("default-generator") == "op") {
-								$this->getServer()->getCommandMap()->dispatch($player, "is create op");
+								$this->getServer()->getCommandMap()->dispatch($player, "sb create op");
                                 break;
 							}
 							if($this->getConfig()->get("default-generator") == "palm") {
-								$this->getServer()->getCommandMap()->dispatch($player, "is create palm");
+								$this->getServer()->getCommandMap()->dispatch($player, "sb create palm");
                                 break;
 							}
 							if($this->getConfig()->get("default-generator") == "shelly") {
-								$this->getServer()->getCommandMap()->dispatch($player, "is create shelly");
+								$this->getServer()->getCommandMap()->dispatch($player, "sb create shelly");
                                 break;
 							}
 						}
                         break;
                     case 2:
-                        $this->getServer()->getCommandMap()->dispatch($player, "is go");
+                        $this->getServer()->getCommandMap()->dispatch($player, "sb go");
                         break;
                     case 3:
-                        $this->getServer()->getCommandMap()->dispatch($player, "is category");
+                        $this->getServer()->getCommandMap()->dispatch($player, "sb category");
                         break;
                     case 4:
-                        $this->getServer()->getCommandMap()->dispatch($player, "is blocks");
+                        $this->getServer()->getCommandMap()->dispatch($player, "sb blocks");
                         break;
                     case 5:
                         $this->transferForm($player);
                         break;
 					case 6:
-						$this->getServer()->getCommandMap()->dispatch($player, "is disband");
+						$this->getServer()->getCommandMap()->dispatch($player, "sb disband");
 						break;
 					case 7:
 					    if($this->getConfig()->get("allow-visit") == true) {
@@ -127,19 +127,19 @@ class Main extends PluginBase implements Listener{
                     case 0:
                         break;
                     case 1:
-                        $this->getServer()->getCommandMap()->dispatch($player, "is create basic");
+                        $this->getServer()->getCommandMap()->dispatch($player, "sb create basic");
                         break;
                     case 2:
-                        $this->getServer()->getCommandMap()->dispatch($player, "is create lost");
+                        $this->getServer()->getCommandMap()->dispatch($player, "sb create lost");
                         break;
                     case 3:
-                        $this->getServer()->getCommandMap()->dispatch($player, "is create op");
+                        $this->getServer()->getCommandMap()->dispatch($player, "sb create op");
                         break;
                     case 4:
-                        $this->getServer()->getCommandMap()->dispatch($player, "is create palm");
+                        $this->getServer()->getCommandMap()->dispatch($player, "sb create palm");
                         break;
                     case 5:
-                        $this->getServer()->getCommandMap()->dispatch($player, "is create shelly");
+                        $this->getServer()->getCommandMap()->dispatch($player, " create shelly");
                         break;
                 }
             });
@@ -171,13 +171,13 @@ class Main extends PluginBase implements Listener{
                         $this->inviteForm($player);
                         break;
                     case 2:
-                        $this->getServer()->getCommandMap()->dispatch($player, "is accept");
+                        $this->getServer()->getCommandMap()->dispatch($player, "sb accept");
                         break;
                     case 3:
-                        $this->getServer()->getCommandMap()->dispatch($player, "is deny");
+                        $this->getServer()->getCommandMap()->dispatch($player, "sb deny");
                         break;
                     case 4:
-                        $this->getServer()->getCommandMap()->dispatch($player, "is leave");
+                        $this->getServer()->getCommandMap()->dispatch($player, "sb leave");
                         break;
                     case 5:
                         $this->cooperateForm($player);
@@ -207,7 +207,7 @@ class Main extends PluginBase implements Listener{
                 }
                 switch ($result) {
                     case 0:
-					    $this->getServer()->getCommandMap()->dispatch($player, "is invite $result");
+					    $this->getServer()->getCommandMap()->dispatch($player, "sb invite $result");
                         break;
                 }
             });
@@ -228,7 +228,7 @@ class Main extends PluginBase implements Listener{
                 }
                 switch ($result) {
                     case 0:
-					    $this->getServer()->getCommandMap()->dispatch($player, "is cooperate $result");
+					    $this->getServer()->getCommandMap()->dispatch($player, "sb cooperate $result");
                         break;
                 }
             });
@@ -249,7 +249,7 @@ class Main extends PluginBase implements Listener{
                 }
                 switch ($result) {
                     case 0:
-					    $this->getServer()->getCommandMap()->dispatch($player, "is visit $result");
+					    $this->getServer()->getCommandMap()->dispatch($player, "sb visit $result");
                         break;
                 }
             });
@@ -270,7 +270,7 @@ class Main extends PluginBase implements Listener{
                 }
                 switch ($result) {
                     case 0:
-					    $this->getServer()->getCommandMap()->dispatch($player, "is transfer $result");
+					    $this->getServer()->getCommandMap()->dispatch($player, "sb transfer $result");
                         break;
                 }
             });
