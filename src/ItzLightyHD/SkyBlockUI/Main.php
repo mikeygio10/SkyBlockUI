@@ -22,7 +22,7 @@ class Main extends PluginBase implements Listener{
     }
 
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args):bool{
-        if($cmd->getName() == "skyblockui"){
+        if($cmd->getName() == "is"){
             if(!($sender instanceof Player)){
                 $sender->sendMessage("Manage your island easily!", false);
                 return true;
